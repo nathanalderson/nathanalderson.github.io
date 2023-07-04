@@ -1,0 +1,15 @@
+url: 'https://nathanalderson.github.io'
+baseurl: 'nathanalderson.com'
+title: 'Nathan Alderson'
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+exclude:
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - package-lock.json
