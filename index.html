@@ -4,7 +4,7 @@ title: "Home"
 ---
 
 <!-- Hero -->
-<div class="bg-white">
+<div id="top" class="bg-white">
   <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
     <div class="mx-auto max-w-7xl">
       <div class="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
@@ -28,11 +28,11 @@ title: "Home"
             </svg>
           </button>
           <div class="hidden lg:flex lg:gap-x-14">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Social</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Skills</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+            <a href="#top" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+            <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+            <a href="#social" class="text-sm font-semibold leading-6 text-gray-900">Social</a>
+            <a href="#skills" class="text-sm font-semibold leading-6 text-gray-900">Skills</a>
+            <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
           </div>
         </nav>
       </div>
@@ -82,11 +82,11 @@ title: "Home"
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div x-on:click="menuOpen=false" class="space-y-2 py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Social</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Skills</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+              <a href="#top" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+              <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+              <a href="#social" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Social</a>
+              <a href="#skills" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Skills</a>
+              <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
           </div>
         </div>
@@ -130,8 +130,8 @@ title: "Home"
   </div>
 </div>
 
-<!-- Enneagram -->
-<div class="bg-white py-24 sm:py-32">
+<!-- About -->
+<div id="about" class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:text-center">
       <h2 class="text-base font-semibold leading-7 text-indigo-600">Hi there!</h2>
@@ -218,7 +218,7 @@ title: "Home"
 </div>
 
 <!-- Social -->
-<div class="py-12 text-gray-900">
+<div id="social" class="py-12 text-gray-900">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:text-center">
       <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Social</h2>
@@ -244,7 +244,7 @@ title: "Home"
 </div>
 
 <!-- Skills -->
-<div class="bg-white py-24 sm:py-32">
+<div id="skills" class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl sm:text-center">
       <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What I'm Good At</h2>
@@ -328,7 +328,8 @@ title: "Home"
   </div>
 </div>
 
-<div class="relative isolate bg-gray-900">
+<!-- Contact -->
+<div id="contact" class="relative isolate bg-gray-900">
   <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
     <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
       <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
