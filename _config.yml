@@ -1,5 +1,5 @@
 url: 'https://nathanalderson.github.io'
-baseurl: 'nathanalderson.com'
+baseurl: '/nathanalderson.com'
 title: 'Nathan Alderson'
 
 plugins:

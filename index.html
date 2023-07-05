@@ -3,4 +3,219 @@ layout: default
 title: "Home"
 ---
 
-<div class="text-xl text-red-500">Hello World</div>
+<!-- Hero -->
+<div class="bg-white">
+  <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
+    <div class="mx-auto max-w-7xl">
+      <div class="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
+        <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Nathan Alderson</span>
+            <img
+              alt="Your Company"
+              class="h-8 w-auto"
+              src="{{ "/assets/images/link.png" | relative_url }}">
+          </a>
+          <button
+            type="button"
+            class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+            x-on:click="menuOpen = !menuOpen">
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <div class="hidden lg:ml-12 lg:flex lg:gap-x-14">
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Social</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Skills</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div
+      x-cloak
+      x-show="menuOpen"
+      class="lg:hidden"
+      role="dialog"
+      aria-modal="true">
+      <div
+        x-cloak
+        x-show="menuOpen"
+        x-on:click="menuOpen = false"
+        class="fixed inset-0 z-50"></div>
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a
+            x-on:click="menuOpen=false"
+            href="#"
+            class="-m-1.5 p-1.5">
+            <span class="sr-only">Nathan Alderson</span>
+            <img
+              class="h-8 w-auto"
+              src="{{ "/assets/images/link.png" | relative_url }}"
+              alt="">
+          </a>
+          <button
+            type="button"
+            class="-m-2.5 rounded-md p-2.5 text-gray-700"
+            x-on:click="menuOpen = false">
+            <span class="sr-only">Close menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div x-on:click="menuOpen=false" class="space-y-2 py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Social</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Skills</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="relative">
+    <div class="mx-auto max-w-7xl">
+      <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
+        <svg
+          class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true">
+          <polygon points="0,0 90,0 50,100 0,100" />
+        </svg>
+
+        <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Nathan Alderson</h1>
+            <ul class="mt-6 text-lg leading-8 text-gray-600">
+              <li>PRINCIPAL SOFTWARE ENGINEER</li>
+              <li>COMPUTER HOBBYIST</li>
+              <li>PERSON</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img
+        class="aspect-[3/2] object-cover object-right lg:aspect-auto lg:h-full lg:w-full"
+        src="{{ "/assets/images/slackline.jpg" | relative_url }}"
+        alt="">
+    </div>
+  </div>
+</div>
+
+<!-- Enneagram -->
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center">
+      <h2 class="text-base font-semibold leading-7 text-indigo-600">Hi there!</h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">I'm glad you found me.</p>
+    </div>
+    <div class="mx-auto max-w-xl lg:text-center sm:mt-20 lg:mt-24">
+      <p class="mt-6 text-center text-lg font-semibold leading-8 text-gray-700">
+        I'm a
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="https://www.enneagraminstitute.com/type-5">five</a>
+        on the
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="https://www.enneagraminstitute.com/how-the-enneagram-system-works">Enneagram</a>.
+      </p>
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none sm:mt-4">
+        <div class="relative">
+          <dt class="text-base font-semibold leading-7 text-gray-900">
+            <div class="mx-auto flex h-10 w-10 mb-4 items-center justify-center rounded-lg bg-indigo-600">
+              <span class="text-2xl text-white">5</span>
+            </div>
+            The Investigator
+          </dt>
+          <dd class="mt-2 text-base leading-7 text-gray-600">
+            Understanding and precision are important to me. I like a blank page and enjoy the visionary stage of projects. I am internally motivated, but sometimes see so many possibilities that choosing becomes difficult.
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="mx-auto max-w-xl lg:text-center sm:mt-20 lg:mt-24">
+      <p class="mt-6 text-center text-lg font-semibold leading-8 text-gray-700">
+        And a
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">Myers-Briggs</a>
+        type
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="http://www.personalitypage.com/INTP.html">INTP</a>.
+      </p>
+    </div>
+    <div class="mx-auto mt-8 max-w-2xl lg:max-w-4xl">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+        <div class="relative pl-16">
+          <dt class="text-base font-semibold leading-7 text-gray-900">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <i class="fa-solid fa-child-reaching text-2xl text-white"></i>
+            </div>
+            Introvert
+          </dt>
+          <dd class="mt-2 text-base leading-7 text-gray-600">
+            This one is often misunderstood. I definitely enjoy social interaction and collaboration. I prefer to work in a team room, for example. However, I need time to process things independently and when I need some time to "recharge," I tend to retreat to a private place. At a party, I will generally hang out with one or two people and have really great conversations, rather than bounce around and talk to everyone.
+          </dd>
+        </div>
+        <div class="relative pl-16">
+          <dt class="text-base font-semibold leading-7 text-gray-900">
+            <div class="absolute left-0 -top-1 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <span class="-mt-1 text-2xl text-white">π</span>
+            </div>
+            Intuitive
+          </dt>
+          <dd class="mt-2 text-base leading-7 text-gray-600">
+            I'm comfortable with abstraction and theory. I love systems (like the MBTI!) and patterns. I'm fairly weak in this one, though, because I do eventually get tired of all the thinking and I start itching to act.
+          </dd>
+        </div>
+        <div class="relative pl-16">
+          <dt class="text-base font-semibold leading-7 text-gray-900">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <i class="fa-solid fa-spinner text-xl text-white"></i>
+            </div>
+            Thinking
+          </dt>
+          <dd class="mt-2 text-base leading-7 text-gray-600">
+            I tend to think and act rationally and logically. I value precision in language and I tend to speak directly. I don't get offended easily because I don't take things personally.
+          </dd>
+        </div>
+        <div class="relative pl-16">
+          <dt class="text-base font-semibold leading-7 text-gray-900">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <i class="fa-regular fa-eye text-xl text-white"></i>
+            </div>
+            Perceiving
+          </dt>
+          <dd class="mt-2 text-base leading-7 text-gray-600">
+            This is perhaps my strongest mbti-letter. I hate making decisions. I'm really good at seeing and articulating all of the options, and I may even have a strong opinion about which one is the best, but I often need help committing to a particular course of action.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
