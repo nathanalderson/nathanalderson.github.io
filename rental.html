@@ -166,3 +166,33 @@ photos:
     </div>
   </div>
 </div>
+
+<!-- Fancy Parallax -->
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="mx-auto h-96 overflow-y-scroll bg-cover bg-center bg-no-repeat" style="background-image:url({{ '/assets/images/rental/back yard.jpg' | relative_url }});" />
+</div>
+
+<!-- Photos -->
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Photos</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">There are also a few more
+        <a
+          class="text-sky-600 hover:underline"
+          href="https://mega.nz/folder/9OEQHIwS#GpTunPMFfqldZ4GeQPfUyQ"
+          target="_new">here</a>.</p>
+    </div>
+    <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      {% for photo in page.photos %}
+        <li>
+          <img
+            class="w-full rounded-2xl object-cover"
+            src="{{ '/assets/images/rental/' | append: photo.file | relative_url }}"
+            alt="{{photo.description}}">
+          <h3 class="mt-6 text-lg text-center font-semibold leading-8 tracking-tight text-gray-900">{{ photo.description }}</h3>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
