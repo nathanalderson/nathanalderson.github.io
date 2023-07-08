@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang=" en-US" class="scroll-smooth">
+<html lang="en-US" class="scroll-smooth">
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Home - Nathan Alderson</title>
-    <link rel="stylesheet" href="/nathanalderson.com/assets/css/main.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://kit.fontawesome.com/581617cb71.js" crossorigin="anonymous"></script>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Rental - Nathan Alderson</title>
+  <link rel="stylesheet" href="/nathanalderson.com/assets/css/main.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://kit.fontawesome.com/581617cb71.js" crossorigin="anonymous"></script>
 
-  <body>
-    <!-- Hero -->
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="/nathanalderson.com/assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="/nathanalderson.com/assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="/nathanalderson.com/assets/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/nathanalderson.com/assets/images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/nathanalderson.com/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+  <!-- Hero -->
 <div id="top" class="bg-gray-900">
   <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -115,7 +128,7 @@
           August 15, 2023
         </h1>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#contact" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-gray-900 hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Apply
+          <a href="#contact" class="rounded-md bg-violet-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-gray-900 hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400">Apply
             Now</a>
         </div>
       </div>
@@ -127,7 +140,7 @@
 </div>
 
 <!-- About -->
-<div class="bg-white py-24 sm:py-32">
+<div id="about" class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       <div class="lg:pr-4">
@@ -162,13 +175,13 @@
   </div>
 </div>
 
-<!-- Fancy Parallax -->
+<!-- Image Separator -->
 <div class="mx-auto max-w-7xl px-6 lg:px-8">
-  <div class="mx-auto h-96 overflow-y-scroll bg-cover bg-center bg-no-repeat" style="background-image:url(/nathanalderson.com/assets/images/rental/back%20yard.jpg);" />
+  <div class="mx-auto h-96 overflow-y-scroll bg-cover bg-center bg-no-repeat" style="background-image:url(/nathanalderson.com/assets/images/rental/back%20yard.jpg);"></div>
 </div>
 
 <!-- Photos -->
-<div class="bg-white py-24 sm:py-32">
+<div id="photos" class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Photos</h2>
@@ -176,7 +189,7 @@
         <a
           class="text-sky-600 hover:underline"
           href="https://mega.nz/folder/9OEQHIwS#GpTunPMFfqldZ4GeQPfUyQ"
-          target="_new">here</a>.</p>
+          target="_blank">here</a>.</p>
     </div>
     <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       
@@ -232,28 +245,256 @@
   </div>
 </div>
 
-<!-- Photos -->
-<div class="bg-white py-12 sm:py-16">
+<!-- Video -->
+<div id="video" class="bg-white py-12 sm:py-16">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="flex flex-col items-center">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Video</h2>
       <iframe
-        class="mt-8"
+        class="mt-8 w-11/12 max-w-4xl aspect-video"
         src="//player.vimeo.com/video/415708005"
-        width="800"
-        height="450"
         frameborder="0"
         allow="autoplay; fullscreen"
         allowfullscreen></iframe>
       <p>Or watch it on
         <a
           href="//vimeo.com/415708005"
-          target="_new"
-          class="text-sky-600 hover:underline">Vimeo</a>
-        (may work better for small screens).</p>
+          target="_blank"
+          class="text-sky-600 hover:underline">Vimeo</a>.</p>
     </div>
   </div>
 </div>
-  </body>
+
+<!-- Features -->
+<div id="features" class="bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex flex-col items-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Features</h2>
+      <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-tree text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Awesome Yard</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">We have a great fenced-in back yard.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-graduation-cap text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Madison City Schools</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">The home is zoned for some of the best schools in the state. West Madison Elementary and Bob Jones High School are both less than a mile away and Discovery Middle is ~2.5 miles.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-bicycle text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Charming Neighborhood</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">The neighborhood is established and diverse, with families ranging from young couples to retired folks. There are sidewalks throughout, mature trees, and a park within walking distance.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-location-dot text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Close to Everything</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">Groceries, restaurants, and pharmacies are all within a mile. There's a Target three miles away. It's just five miles to Research Park and eight to Redstone Arsenal Gate 9. Downtown Huntsville is just thirteen miles away.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-network-wired text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Wired for Ethernet</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">We used an upstairs closet as a wiring closet and ran CAT-5e cable to the living room (great for a media-center PC), bonus room, and kitchen.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-moon text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Renovated Master Suite</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">The master bathroom has a dual vanity with granite countertops, an all-glass shower, a jacuzzi tub and new hardwoods. The hardwoods extend into the master bedroom, and its two closets (one walk-in).</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-star text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Extra Spaces</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">The space above the garage features a bonus room and an in-law suite which includes a bedroom, three-quarter bath and closet. The back yard has a large storage shed and a parking pad accessible from an additional driveway.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-shoe-prints text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">New Flooring</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">New flooring and carpet throughout the house.</dd>
+          </div>
+        
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- Lease -->
+<div id="lease" class="bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex flex-col items-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Lease</h2>
+      <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-paw text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Pet Friendly</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">We have a great fenced-in back yard with a large pet door. We're open to indoor-outdoor dogs and cats, as long as they're house trained and aren't dangerous. We do have a $500 pet deposit, but it's refundable after a year if there's no pet damage.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-jet-fighter text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Pet Friendly</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">If relevant, we're willing to include a get-out-of-lease-free clause for active military personelle who get deployed/relocated.</dd>
+          </div>
+        
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="fa-solid fa-calendar text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">Flexibility</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">We realize that many people are renting during a period of transition. We've been in the situation of trying to time the end of a lease with the purchase of home, and we know how challenging and frustrating it can be. We're willing to be flexible. If you'd like to go month-to-month at the end of your lease, we won't hike the rate on you.</dd>
+          </div>
+        
+      </dl>
+    </div>
+  </div>
+
+  <!-- Cost -->
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-none">
+        <div class="text-center">
+          <h3 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Cost</h3>
+        </div>
+        <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center lg:grid-cols-3">
+          <div class="flex flex-col bg-gray-400/5 p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">Rent</dt>
+            <dd class="flex flex-col items-center">
+              <span class="text-3xl font-semibold tracking-tight text-gray-900">$2150/mo.</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">for an 18-month lease</span>
+            </dd>
+          </div>
+          <div class="flex flex-col bg-gray-400/5 p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">Deposit</dt>
+            <dd class="flex flex-col items-center">
+              <span class="text-3xl font-semibold tracking-tight text-gray-900">$500</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">refundable</span>
+            </dd>
+          </div>
+          <div class="flex flex-col bg-gray-400/5 p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">Pet Deposit</dt>
+            <dd class="flex flex-col items-center">
+              <span class="text-3xl font-semibold tracking-tight text-gray-900">$500</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">refundable after one year if no pet damage</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="relative isolate bg-gray-900">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+    <div class="relative px-6 pb-20 pt-24 lg:static lg:px-8">
+      <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+        <h2 class="text-3xl font-bold tracking-tight text-white">Contact Info</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">If you would like more information, or if you would like to come take a look, you can use the form provided or email me at
+          <a class="text-sky-500 hover:underline" href="mailto:me@nathanalderson.com">me@nathanalderson.com</a>
+        </p>
+        <h2 class="mt-8 text-3xl font-bold tracking-tight text-white">Application</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Click
+          <a
+            class="text-sky-500 hover:underline"
+            href="/nathanalderson.com/assets/docs/application.pdf"
+            target="_blank">here</a>
+          to download our application. Fill it out and bring it with you, if you want!
+        </p>
+      </div>
+    </div>
+    <form
+      action="#"
+      method="POST"
+      class="px-6 pb-24 pt-20 lg:px-8">
+      <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div class="sm:col-span-2">
+            <label for="first-name" class="block text-sm font-semibold leading-6 text-white">Name</label>
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="name"
+                class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-violet-500 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
+            <div class="mt-2.5">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-violet-500 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm font-semibold leading-6 text-white">Message</label>
+            <div class="mt-2.5">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-violet-500 sm:text-sm sm:leading-6"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 flex justify-end">
+          <button type="submit" class="rounded-md bg-violet-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500">Send message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Map -->
+<section id="map" class="h-[30rem]">
+  <iframe
+    width="100%"
+    height="100%"
+    frameborder="0"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.6070843059374!2d-86.75260800000002!3d34.71508899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886265ee11fda7c9%3A0xa13fb7d961c36aaf!2s156+Mill+Creek+Crossing%2C+Madison%2C+AL+35758!5e0!3m2!1sen!2sus!4v1415596252085">
+  </iframe>
+    <br />
+    <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+    </small>
+    </iframe>
+</section>
+</body>
 
 </html>
