@@ -205,9 +205,9 @@ lease:
   </div>
 </div>
 
-<!-- Fancy Parallax -->
+<!-- Image Separator -->
 <div class="mx-auto max-w-7xl px-6 lg:px-8">
-  <div class="mx-auto h-96 overflow-y-scroll bg-cover bg-center bg-no-repeat" style="background-image:url({{ '/assets/images/rental/back yard.jpg' | relative_url }});" />
+  <div class="mx-auto h-96 overflow-y-scroll bg-cover bg-center bg-no-repeat" style="background-image:url({{ '/assets/images/rental/back yard.jpg' | relative_url }});"></div>
 </div>
 
 <!-- Photos -->
@@ -331,3 +331,88 @@ lease:
     </div>
   </div>
 </div>
+
+<!-- Contact -->
+<div id="contact" class="relative isolate bg-gray-900">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+    <div class="relative px-6 pb-20 pt-24 lg:static lg:px-8">
+      <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+        <h2 class="text-3xl font-bold tracking-tight text-white">Contact Info</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">If you would like more information, or if you would like to come take a look, you can use the form provided or email me at
+          <a class="text-sky-500 hover:underline" href="mailto:me@nathanalderson.com">me@nathanalderson.com</a>
+        </p>
+        <h2 class="mt-8 text-3xl font-bold tracking-tight text-white">Application</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Click
+          <a
+            class="text-sky-500 hover:underline"
+            href="{{ '/assets/docs/application.pdf' | relative_url }}"
+            target="_new">here</a>
+          to download our application. Fill it out and bring it with you, if you want!
+        </p>
+      </div>
+    </div>
+    <form
+      action="#"
+      method="POST"
+      class="px-6 pb-24 pt-20 lg:px-8">
+      <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div class="sm:col-span-2">
+            <label for="first-name" class="block text-sm font-semibold leading-6 text-white">Name</label>
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="name"
+                class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
+            <div class="mt-2.5">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm font-semibold leading-6 text-white">Message</label>
+            <div class="mt-2.5">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 flex justify-end">
+          <button type="submit" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Send message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Map -->
+<section id="map" class="h-[30rem]">
+  <iframe
+    width="100%"
+    height="100%"
+    frameborder="0"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.6070843059374!2d-86.75260800000002!3d34.71508899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886265ee11fda7c9%3A0xa13fb7d961c36aaf!2s156+Mill+Creek+Crossing%2C+Madison%2C+AL+35758!5e0!3m2!1sen!2sus!4v1415596252085">
+  </iframe>
+    <br />
+    <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+    </small>
+    </iframe>
+</section>
