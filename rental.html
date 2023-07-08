@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Home"
+
 photos:
   - file: master bathroom 2.jpg
     description: Master Bathroom
@@ -14,6 +15,43 @@ photos:
     description: Kitchen
   - file: bonus room.jpg
     description: Bonus Room
+
+features:
+  - title: Awesome Yard
+    icon: fa-solid fa-tree
+    description: We have a great fenced-in back yard.
+  - title: Madison City Schools
+    icon: fa-solid fa-graduation-cap
+    description: The home is zoned for some of the best schools in the state. West Madison Elementary and Bob Jones High School are both less than a mile away and Discovery Middle is ~2.5 miles. 
+  - title: Charming Neighborhood
+    icon: fa-solid fa-bicycle
+    description: The neighborhood is established and diverse, with families ranging from young couples to retired folks. There are sidewalks throughout, mature trees, and a park within walking distance.
+  - title: Close to Everything
+    icon: fa-solid fa-location-dot
+    description: Groceries, restaurants, and pharmacies are all within a mile. There's a Target three miles away. It's just five miles to Research Park and eight to Redstone Arsenal Gate 9. Downtown Huntsville is just thirteen miles away.
+  - title: Wired for Ethernet
+    icon: fa-solid fa-network-wired
+    description: We used an upstairs closet as a wiring closet and ran CAT-5e cable to the living room (great for a media-center PC), bonus room, and kitchen.
+  - title: Renovated Master Suite
+    icon: fa-solid fa-moon
+    description: The master bathroom has a dual vanity with granite countertops, an all-glass shower, a jacuzzi tub and new hardwoods. The hardwoods extend into the master bedroom, and its two closets (one walk-in).
+  - title: Extra Spaces
+    icon: fa-solid fa-star
+    description: The space above the garage features a bonus room and an in-law suite which includes a bedroom, three-quarter bath and closet. The back yard has a large storage shed and a parking pad accessible from an additional driveway.
+  - title: New Flooring
+    icon: fa-solid fa-shoe-prints
+    description: New flooring and carpet throughout the house.
+    
+lease:
+  - title: Pet Friendly
+    icon: fa-solid fa-paw
+    description: We have a great fenced-in back yard with a large pet door. We're open to indoor-outdoor dogs and cats, as long as they're house trained and aren't dangerous. We do have a $500 pet deposit, but it's refundable after a year if there's no pet damage.
+  - title: Pet Friendly
+    icon: fa-solid fa-jet-fighter
+    description: If relevant, we're willing to include a get-out-of-lease-free clause for active military personelle who get deployed/relocated. 
+  - title: Flexibility
+    icon: fa-solid fa-calendar
+    description: We realize that many people are renting during a period of transition. We've been in the situation of trying to time the end of a lease with the purchase of home, and we know how challenging and frustrating it can be. We're willing to be flexible. If you'd like to go month-to-month at the end of your lease, we won't hike the rate on you.
 ---
 
 <!-- Hero -->
@@ -132,7 +170,7 @@ photos:
 </div>
 
 <!-- About -->
-<div class="bg-white py-24 sm:py-32">
+<div id="about" class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       <div class="lg:pr-4">
@@ -173,7 +211,7 @@ photos:
 </div>
 
 <!-- Photos -->
-<div class="bg-white py-24 sm:py-32">
+<div id="photos" class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Photos</h2>
@@ -197,8 +235,8 @@ photos:
   </div>
 </div>
 
-<!-- Photos -->
-<div class="bg-white py-12 sm:py-16">
+<!-- Video -->
+<div id="video" class="bg-white py-12 sm:py-16">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="flex flex-col items-center">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Video</h2>
@@ -216,6 +254,80 @@ photos:
           target="_new"
           class="text-sky-600 hover:underline">Vimeo</a>
         (may work better for small screens).</p>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div id="features" class="bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex flex-col items-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Features</h2>
+      <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        {% for feature in page.features %}
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="{{ feature.icon }} text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">{{ feature.title }}</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">{{ feature.description }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- Lease -->
+<div id="lease" class="bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex flex-col items-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Lease</h2>
+      <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        {% for feature in page.lease %}
+          <div>
+            <dt class="tracking-wide text-gray-900 flex items-center space-x-4">
+              <i class="{{ feature.icon }} text-2xl sm:text-5xl"></i>
+              <span class="text-lg font-light uppercase">{{ feature.title }}</span>
+            </dt>
+            <dd class="mt-1 text-gray-600">{{ feature.description }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+
+  <!-- Cost -->
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-none">
+        <div class="text-center">
+          <h3 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Cost</h3>
+        </div>
+        <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center lg:grid-cols-3">
+          <div class="flex flex-col bg-gray-400/5 p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">Rent</dt>
+            <dd class="flex flex-col items-center">
+              <span class="text-3xl font-semibold tracking-tight text-gray-900">$2150/mo.</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">for an 18-month lease</span>
+            </dd>
+          </div>
+          <div class="flex flex-col bg-gray-400/5 p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">Deposit</dt>
+            <dd class="flex flex-col items-center">
+              <span class="text-3xl font-semibold tracking-tight text-gray-900">$500</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">refundable</span>
+            </dd>
+          </div>
+          <div class="flex flex-col bg-gray-400/5 p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">Pet Deposit</dt>
+            <dd class="flex flex-col items-center">
+              <span class="text-3xl font-semibold tracking-tight text-gray-900">$500</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">refundable after one year if no pet damage</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
     </div>
   </div>
 </div>
