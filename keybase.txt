@@ -1,0 +1,61 @@
+---
+layout: none
+permalink: keybase.txt
+---
+
+==================================================================
+https://keybase.io/nathanalderson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nathanalderson.com
+  * I am nathanalderson (https://keybase.io/nathanalderson) on keybase.
+  * I have a public key ASDztum8dceVzp7HALn93ox3o6hDTusQP_QpfIR8pFeFrwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204ff711527cb54db491b25b6f5c393a9b81b3b16370502fccb274c093dc0deba80a",
+      "host": "keybase.io",
+      "kid": "0120f3b6e9bc75c795ce9ec700b9fdde8c77a3a8434eeb103ff4297c847ca45785af0a",
+      "uid": "586b6ca5ee88bfb5b7c555f942f8e619",
+      "username": "nathanalderson"
+    },
+    "merkle_root": {
+      "ctime": 1688950003,
+      "hash": "2610ecd57003359c88368dff3017f9cbde6f85af92a27b33aca2e349bb203620877f41461a5601d35bfddd21ac2ecfb964e8cff021e9bb33124ff0fe9f5f7f22",
+      "hash_meta": "80694dbefbfc49778ecc6802b144fe0807766d4d15dfecdf5a85d25e0575f24d",
+      "seqno": 24663505
+    },
+    "service": {
+      "entropy": "eg8I25XKJX0GUkCyX99X0zS+",
+      "hostname": "nathanalderson.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.2"
+  },
+  "ctime": 1688950035,
+  "expire_in": 504576000,
+  "prev": "857e2bff08b5b07e05e00924993597251a9b67e6bb57c8ffc7a30ba2a2297c56",
+  "seqno": 57,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg87bpvHXHlc6exwC5/d6Md6OoQ07rED/0KXyEfKRXha8Kp3BheWxvYWTESpcCOcQghX4r/wi1sH4F4AkkmTWXJRqbZ+a7V8j/x6MLoqIpfFbEIJDPVUjBe9qHhDJaXxZTiXdYnygXTqKUL642bRi/Gm2HAgHCo3NpZ8RA+13YXcTccaDH/nIOOI6jFaSChJ5q3Oq2gKYHYsRZc2gKzUaCVQA4DPlxY1OUPff3ERVh/G018LRhZ+BinmdBDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMMwXN87hmhPrHvcAUb97B9BEGWE09fuRXySUIOHf6+Ho3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nathanalderson
+
+==================================================================
