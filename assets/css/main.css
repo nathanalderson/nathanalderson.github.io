@@ -913,6 +913,9 @@ select {
 .flex-none {
   flex: none;
 }
+.grow {
+  flex-grow: 1;
+}
 .basis-1\/2 {
   flex-basis: 50%;
 }
@@ -1164,6 +1167,10 @@ select {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
 }
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1225,6 +1232,9 @@ select {
 }
 .text-center {
   text-align: center;
+}
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1465,12 +1475,28 @@ select {
     grid-column: span 2 / span 2;
   }
 
+  .sm\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:mt-1 {
+    margin-top: 0.25rem;
+  }
+
   .sm\:mt-20 {
     margin-top: 5rem;
   }
 
   .sm\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .sm\:grid {
+    display: grid;
   }
 
   .sm\:w-\[72\.1875rem\] {
@@ -1485,8 +1511,21 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
+  }
+
   .sm\:gap-y-24 {
     row-gap: 6rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sm\:py-16 {
@@ -1513,6 +1552,10 @@ select {
     text-align: center;
   }
 
+  .sm\:text-right {
+    text-align: right;
+  }
+
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1526,6 +1569,11 @@ select {
   .sm\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .sm\:text-sm {
@@ -1549,6 +1597,11 @@ select {
 
   .sm\:ring-white\/10 {
     --tw-ring-color: rgb(255 255 255 / 0.1);
+  }
+
+  .sm\:after\:content-\[\'\:\'\]::after {
+    --tw-content: ':';
+    content: var(--tw-content);
   }
 }
 @media (min-width: 768px) {
