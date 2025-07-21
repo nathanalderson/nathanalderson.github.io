@@ -430,12 +430,8 @@ at the end of your lease, we won't hike the rate on you.
         </p>
       </div>
     </div>
-    <script
-  type="module"
-  src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.module.min.js"
-  async
-  defer
-></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.module.min.js" async
+  defer></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.min.js" async defer></script>
 <script>
   function captchaCallback(solution) {
@@ -443,10 +439,8 @@ at the end of your lease, we won't hike the rate on you.
   }
 </script>
 
-<form action="https://hook.us1.make.com/cgrxgb1uinwur01arl7vhsfatm5gcc3q" method="POST"
-  class="px-6 pb-24 pt-20 lg:px-8"
-  x-data="{ captchaDone: false }"
-  x-on:captcha-done.window="captchaDone = true">
+<form action="https://hook.us1.make.com/cgrxgb1uinwur01arl7vhsfatm5gcc3q" method="POST" class="px-6 pb-24 pt-20 lg:px-8"
+  x-data="{ captchaDone: false }" x-on:captcha-done.window="captchaDone = true">
   <input type="hidden" name="source" id="source" value="rental">
   <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -454,32 +448,30 @@ at the end of your lease, we won't hike the rate on you.
         <label for="first-name" class="block text-sm font-semibold leading-6 text-white">Name</label>
         <div class="mt-2.5">
           <input type="text" name="name" id="name" autocomplete="name"
-            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6">
         </div>
       </div>
       <div class="sm:col-span-2">
         <label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
         <div class="mt-2.5">
           <input type="email" name="email" id="email" autocomplete="email"
-            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6">
         </div>
       </div>
       <div class="sm:col-span-2">
         <label for="message" class="block text-sm font-semibold leading-6 text-white">Message</label>
         <div class="mt-2.5">
           <textarea name="message" id="message" rows="4"
-            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"></textarea>
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"></textarea>
         </div>
       </div>
       <div class="frc-captcha dark sm:col-span-2" data-sitekey="FCMIACP0EROAV0RE" data-callback="captchaCallback"></div>
     </div>
     <div class="mt-8 flex justify-end">
-      <button type="submit"
-        x-bind:disabled="!captchaDone"
-        class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-        x-bind:class="captchaDone ? 'bg-indigo-500 cursor-pointer' : 'bg-gray-500 cursor-not-allowed'"
-      >
-          Send message
+      <button type="submit" x-bind:disabled="!captchaDone"
+        class="rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+        x-bind:class="captchaDone ? 'bg-sky-800 hover:bg-sky-700  focus-visible:outline-sky-800 cursor-pointer' : 'bg-gray-500 cursor-not-allowed'">
+        Send message
       </button>
     </div>
   </div>
