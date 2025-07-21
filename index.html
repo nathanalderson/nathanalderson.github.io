@@ -9,22 +9,12 @@ title: "Home"
     <div class="mx-auto max-w-7xl">
       <div class="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
         <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
-          <button
-            type="button"
-            class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
             x-on:click="menuOpen = !menuOpen">
             <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
               aria-hidden="true">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
           <div class="hidden lg:flex lg:gap-x-14">
@@ -38,57 +28,37 @@ title: "Home"
       </div>
     </div>
     <!-- Mobile menu -->
-    <div
-      x-cloak
-      x-show="menuOpen"
-      class="lg:hidden"
-      role="dialog"
-      aria-modal="true">
+    <div x-cloak x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
       <!-- Background backdrop -->
+      <div x-cloak x-show="menuOpen" x-on:click="menuOpen = false" class="fixed inset-0 z-50"></div>
       <div
-        x-cloak
-        x-show="menuOpen"
-        x-on:click="menuOpen = false"
-        class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
-          <a
-            x-on:click="menuOpen=false"
-            href="#"
-            class="-m-1.5 p-1.5">
+          <a x-on:click="menuOpen=false" href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Nathan Alderson</span>
-            <img
-              class="h-8 w-auto"
-              src="{{ '/assets/images/link.png' | relative_url }}"
-              alt=""/>
+            <img class="h-8 w-auto" src="{{ '/assets/images/link.png' | relative_url }}" alt="" />
           </a>
-          <button
-            type="button"
-            class="-m-2.5 rounded-md p-2.5 text-gray-700"
-            x-on:click="menuOpen = false">
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" x-on:click="menuOpen = false">
             <span class="sr-only">Close menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
               aria-hidden="true">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div x-on:click="menuOpen=false" class="space-y-2 py-6">
-              <a href="#top" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-              <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
-              <a href="#social" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Social</a>
-              <a href="#skills" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Skills</a>
-              <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+              <a href="#top"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+              <a href="#about"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+              <a href="#social"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Social</a>
+              <a href="#skills"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Skills</a>
+              <a href="#contact"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
           </div>
         </div>
@@ -99,20 +69,15 @@ title: "Home"
   <div class="relative">
     <div class="mx-auto max-w-7xl">
       <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-        <svg
-          class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          aria-hidden="true">
+        <svg class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
+          viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <polygon points="0,0 90,0 50,100 0,100" />
         </svg>
 
         <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
           <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-            <img
-              class="max-h-48"
-              alt="8-bit, pixellated image of Link from Zelda II: The Adventures of Link"
-              src="{{ '/assets/images/link.png' | relative_url }}"/>
+            <img class="max-h-48" alt="8-bit, pixellated image of Link from Zelda II: The Adventures of Link"
+              src="{{ '/assets/images/link.png' | relative_url }}" />
             <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Nathan Alderson</h1>
             <ul class="mt-6 text-lg leading-8 text-gray-600">
               <li>PRINCIPAL SOFTWARE ENGINEER</li>
@@ -124,10 +89,8 @@ title: "Home"
       </div>
     </div>
     <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img
-        class="aspect-[3/2] object-cover object-right lg:aspect-auto lg:h-full lg:w-full"
-        src="{{ '/assets/images/slackline.jpg' | relative_url }}"
-        alt="Nathan on a slackline"/>
+      <img class="aspect-[3/2] object-cover object-right lg:aspect-auto lg:h-full lg:w-full"
+        src="{{ '/assets/images/slackline.jpg' | relative_url }}" alt="Nathan on a slackline" />
     </div>
   </div>
 </div>
@@ -142,9 +105,11 @@ title: "Home"
     <div class="mx-auto max-w-xl lg:text-center sm:mt-20 lg:mt-24">
       <p class="mt-6 text-center text-lg font-semibold leading-8 text-gray-700">
         I'm a
-        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="https://www.enneagraminstitute.com/type-5">five</a>
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline"
+          href="https://www.enneagraminstitute.com/type-5">five</a>
         on the
-        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="https://www.enneagraminstitute.com/how-the-enneagram-system-works">Enneagram</a>.
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline"
+          href="https://www.enneagraminstitute.com/how-the-enneagram-system-works">Enneagram</a>.
       </p>
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none sm:mt-4">
         <div class="relative">
@@ -155,7 +120,9 @@ title: "Home"
             The Investigator
           </dt>
           <dd class="mt-2 text-base leading-7 text-gray-600">
-            Understanding and precision are important to me. I like a blank page and enjoy the visionary stage of projects. I am internally motivated, but sometimes see so many possibilities that choosing becomes difficult.
+            Understanding and precision are important to me. I like a blank page and enjoy the visionary stage of
+            projects. I am internally motivated, but sometimes see so many possibilities that choosing becomes
+            difficult.
           </dd>
         </div>
       </dl>
@@ -163,9 +130,11 @@ title: "Home"
     <div class="mx-auto max-w-xl lg:text-center sm:mt-20 lg:mt-24">
       <p class="mt-6 text-center text-lg font-semibold leading-8 text-gray-700">
         And a
-        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">Myers-Briggs</a>
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline"
+          href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">Myers-Briggs</a>
         type
-        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline" href="http://www.personalitypage.com/INTP.html">INTP</a>.
+        <a class="text-indigo-600 decoration-dotted decoration-2 hover:underline"
+          href="http://www.personalitypage.com/INTP.html">INTP</a>.
       </p>
     </div>
     <div class="mx-auto mt-8 max-w-2xl lg:max-w-4xl">
@@ -178,7 +147,10 @@ title: "Home"
             Introvert
           </dt>
           <dd class="mt-2 text-base leading-7 text-gray-600">
-            This one is often misunderstood. I definitely enjoy social interaction and collaboration. I prefer to work in a team room, for example. However, I need time to process things independently and when I need some time to "recharge," I tend to retreat to a private place. At a party, I will generally hang out with one or two people and have really great conversations, rather than bounce around and talk to everyone.
+            This one is often misunderstood. I definitely enjoy social interaction and collaboration. I prefer to work
+            in a team room, for example. However, I need time to process things independently and when I need some time
+            to "recharge," I tend to retreat to a private place. At a party, I will generally hang out with one or two
+            people and have really great conversations, rather than bounce around and talk to everyone.
           </dd>
         </div>
         <div class="relative pl-16">
@@ -189,7 +161,8 @@ title: "Home"
             Intuitive
           </dt>
           <dd class="mt-2 text-base leading-7 text-gray-600">
-            I'm comfortable with abstraction and theory. I love systems (like the MBTI!) and patterns. I'm fairly weak in this one, though, because I do eventually get tired of all the thinking and I start itching to act.
+            I'm comfortable with abstraction and theory. I love systems (like the MBTI!) and patterns. I'm fairly weak
+            in this one, though, because I do eventually get tired of all the thinking and I start itching to act.
           </dd>
         </div>
         <div class="relative pl-16">
@@ -200,7 +173,8 @@ title: "Home"
             Thinking
           </dt>
           <dd class="mt-2 text-base leading-7 text-gray-600">
-            I tend to think and act rationally and logically. I value precision in language and I tend to speak directly. I don't get offended easily because I don't take things personally.
+            I tend to think and act rationally and logically. I value precision in language and I tend to speak
+            directly. I don't get offended easily because I don't take things personally.
           </dd>
         </div>
         <div class="relative pl-16">
@@ -211,7 +185,9 @@ title: "Home"
             Perceiving
           </dt>
           <dd class="mt-2 text-base leading-7 text-gray-600">
-            This is perhaps my strongest mbti-letter. I hate making decisions. I'm really good at seeing and articulating all of the options, and I may even have a strong opinion about which one is the best, but I often need help committing to a particular course of action.
+            This is perhaps my strongest mbti-letter. I hate making decisions. I'm really good at seeing and
+            articulating all of the options, and I may even have a strong opinion about which one is the best, but I
+            often need help committing to a particular course of action.
           </dd>
         </div>
       </dl>
@@ -225,22 +201,26 @@ title: "Home"
     <div class="mx-auto max-w-2xl lg:text-center">
       <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Social</h2>
     </div>
-    <div class="mx-auto mt-10 grid max-w-lg grid-cols-1 items-center gap-x-8 gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      <a href="https://twitter.com/nathanalderson" class="text-center text-xl flex flex-col space-y-4 items-center hover:scale-125 transition">
+    <div
+      class="mx-auto mt-10 grid max-w-lg grid-cols-1 items-center gap-x-8 gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <a href="https://twitter.com/nathanalderson"
+        class="text-center text-xl flex flex-col space-y-4 items-center hover:scale-125 transition">
         <i class="text-indigo-500 fa-brands fa-twitter text-6xl"></i>
         <div>twitter.com/nathanalderson</div>
       </a>
 
-      <a href="https://github.com/nathanalderson" class="text-center text-xl flex flex-col space-y-4 items-center hover:scale-125 transition">
+      <a href="https://github.com/nathanalderson"
+        class="text-center text-xl flex flex-col space-y-4 items-center hover:scale-125 transition">
         <i class="text-indigo-500 fa-brands fa-github text-6xl"></i>
         <div>github.com/nathanalderson</div>
       </a>
 
-      <a href="https://twitter.com/nathanalderson" class="text-center text-xl flex flex-col space-y-4 items-center hover:scale-125 transition">
+      <a href="https://twitter.com/nathanalderson"
+        class="text-center text-xl flex flex-col space-y-4 items-center hover:scale-125 transition">
         <i class="text-indigo-500 fa-brands fa-keybase text-6xl"></i>
         <div>keybase.io/nathanalderson</div>
       </a>
-    </dl>
+      </dl>
     </div>
   </div>
 </div>
@@ -253,14 +233,17 @@ title: "Home"
     </div>
   </div>
   <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-    <dl class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4 lg:gap-x-6 lg:gap-y-16">
+    <dl
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4 lg:gap-x-6 lg:gap-y-16">
       <div class="relative pl-9">
         <dt class="inline font-semibold text-gray-900">
           <i class="fa-solid fa-laptop-code absolute left-1 top-1 text-lg text-indigo-600"></i>
           Software
         </dt>
         <dd class="inline">
-          I love to deliver working, tested, well-documented code. I've written lots of Scala, Python, and embedded C/C++ (though it's been a while). I've built drivers and web apps, utility scripts and libraries, frameworks and microservices.
+          I love to deliver working, tested, well-documented code. I've written lots of Scala, Python, and embedded
+          C/C++ (though it's been a while). I've built drivers and web apps, utility scripts and libraries, frameworks
+          and microservices.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -269,7 +252,8 @@ title: "Home"
           Networking
         </dt>
         <dd class="inline">
-          Most people just use the network: I've helped build it. I've monkied with IP stacks, written layer-1 drivers, and built an overlay network for containers.
+          Most people just use the network: I've helped build it. I've monkied with IP stacks, written layer-1 drivers,
+          and built an overlay network for containers.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -278,7 +262,8 @@ title: "Home"
           Linux
         </dt>
         <dd class="inline">
-          I love VIM. I've published and contributed to several OSS projects. I prefer the command line. By the way I use Arch.
+          I love VIM. I've published and contributed to several OSS projects. I prefer the command line. By the way I
+          use Arch.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -287,7 +272,8 @@ title: "Home"
           Learning
         </dt>
         <dd class="inline">
-         From rock climbing to functional programming, from woodworking to container orchestration, I've taught myself a lot. I learn by reading, talking, and doing. 
+          From rock climbing to functional programming, from woodworking to container orchestration, I've taught myself
+          a lot. I learn by reading, talking, and doing.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -296,7 +282,8 @@ title: "Home"
           Architecture
         </dt>
         <dd class="inline">
-         From embedded applications to cloud-deployed, clustered application frameworks, I don't just like writing code, I like desigining software. I challenge the status quo but approach new ideas critically. 
+          From embedded applications to cloud-deployed, clustered application frameworks, I don't just like writing
+          code, I like desigining software. I challenge the status quo but approach new ideas critically.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -305,7 +292,8 @@ title: "Home"
           Buzzwords
         </dt>
         <dd class="inline">
-         Cloud computing. Functional programming. SDN/NFV. Containerization. Agile... Name your buzzword, I've tried it and I've probably got an opinion. Actually, I'm really in to all of those. 
+          Cloud computing. Functional programming. SDN/NFV. Containerization. Agile... Name your buzzword, I've tried it
+          and I've probably got an opinion. Actually, I'm really in to all of those.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -314,7 +302,9 @@ title: "Home"
           Tools
         </dt>
         <dd class="inline">
-         I'm a power user. I like diving into config files and settings menus. I love keyboard shortcuts and workflows. I tend to root my phones and compile my own kernels, and I do a task approximately 1.5 times before I automate it.
+          I'm a power user. I like diving into config files and settings menus. I love keyboard shortcuts and workflows.
+          I tend to root my phones and compile my own kernels, and I do a task approximately 1.5 times before I automate
+          it.
         </dd>
       </div>
       <div class="relative pl-9">
@@ -323,7 +313,8 @@ title: "Home"
           Coaching
         </dt>
         <dd class="inline">
-         I really like learning alongside other people. I love pairing because I enjoy learning from folks smarter than I, and I like sharing the things I've learned with others.
+          I really like learning alongside other people. I love pairing because I enjoy learning from folks smarter than
+          I, and I like sharing the things I've learned with others.
         </dd>
       </div>
     </dl>
@@ -336,9 +327,12 @@ title: "Home"
     <div class="relative px-6 pb-20 pt-24 lg:static lg:px-8">
       <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
         <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
-          <svg class="absolute inset-0 h-full w-full stroke-gray-700 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <svg
+            class="absolute inset-0 h-full w-full stroke-gray-700 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            aria-hidden="true">
             <defs>
-              <pattern id="54f88622-e7f8-4f1d-aaf9-c2f5e46dd1f2" width="200" height="200" x="100%" y="-1" patternUnits="userSpaceOnUse">
+              <pattern id="54f88622-e7f8-4f1d-aaf9-c2f5e46dd1f2" width="200" height="200" x="100%" y="-1"
+                patternUnits="userSpaceOnUse">
                 <path d="M130 200V.5M.5 .5H200" fill="none" />
               </pattern>
             </defs>
@@ -347,24 +341,31 @@ title: "Home"
             </svg>
             <rect width="100%" height="100%" stroke-width="0" fill="url(#54f88622-e7f8-4f1d-aaf9-c2f5e46dd1f2)" />
           </svg>
-          <div class="absolute -left-56 top-[calc(100%-13rem)] transform-gpu blur-3xl lg:left-[max(-14rem,calc(100%-59rem))] lg:top-[calc(50%-7rem)]" aria-hidden="true">
-            <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#80caff] to-[#4f46e5] opacity-20" style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)"></div>
+          <div
+            class="absolute -left-56 top-[calc(100%-13rem)] transform-gpu blur-3xl lg:left-[max(-14rem,calc(100%-59rem))] lg:top-[calc(50%-7rem)]"
+            aria-hidden="true">
+            <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#80caff] to-[#4f46e5] opacity-20"
+              style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+            </div>
           </div>
         </div>
         <h2 class="text-3xl font-bold tracking-tight text-white">Contact Me</h2>
-        <p class="mt-6 text-lg leading-8 text-gray-300">You can get in touch with me using the form provided, or any of the following links:</p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">You can get in touch with me using the form provided, or any of
+          the following links:</p>
         <dl class="mt-10 space-y-4 text-base leading-7 text-gray-300">
           <div class="flex gap-x-4">
             <dt class="flex-none w-4">
-              <span class="sr-only">Email</span>
-              <i class="fa-solid fa-envelope text-gray-400"></i>
+              <span class="sr-only">Signal</span>
+              <i class="fa-brands fa-signal-messenger text-gray-400 w-5 text-center"></i>
             </dt>
-            <dd><a class="hover:text-white" href="mailto:me@nathanalderson.com">me@nathanalderson.com</a></dd>
+            <dd><a class="hover:text-white"
+                href="https://signal.group/#CjQKICurg8_KofBG-c4h-Q85_V6uimlYSOxA1hlIN8dcWw0_EhAsa17uVrBBtGZSrqi9Zivp">nathanalderson.80</a>
+            </dd>
           </div>
           <div class="flex gap-x-4">
             <dt class="flex-none w-4">
               <span class="sr-only">Discord</span>
-              <i class="fa-brands fa-discord text-gray-400"></i>
+              <i class="fa-brands fa-discord text-gray-400 w-5 text-center"></i>
             </dt>
             <dd><a class="hover:text-white" href="https://discord.com/users/nathanalderson">nathanalderson</a></dd>
           </div>
