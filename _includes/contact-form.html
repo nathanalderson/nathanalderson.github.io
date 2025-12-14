@@ -1,44 +1,46 @@
-<script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.module.min.js" async
-  defer></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.min.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
-  function captchaCallback(solution) {
-    window.dispatchEvent(new Event('captcha-done'))
+  function onSubmit() {
+    document.getElementById("contact-form").submit()
+  }
+
+  // Reset form on page reload
+  window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
   }
 </script>
 
-<form action="https://hook.us1.make.com/cgrxgb1uinwur01arl7vhsfatm5gcc3q" method="POST" class="px-6 pb-24 pt-20 lg:px-8"
-  x-data="{ captchaDone: false }" x-on:captcha-done.window="captchaDone = true">
-  <input type="hidden" name="source" id="source" value="{{ include.source }}">
+<form id="contact-form" action="https://formspree.io/f/movgbppv" method="POST" class="px-6 pb-24 pt-20 lg:px-8">
+  <input name="subject" type="hidden" value="Website contact from {{ name }}" />
   <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div class="sm:col-span-2">
-        <label for="first-name" class="block text-sm font-semibold leading-6 text-white">Name</label>
+        <label for="name" class="block text-sm font-semibold leading-6 text-white">Name</label>
         <div class="mt-2.5">
-          <input type="text" name="name" id="name" autocomplete="name"
+          <input type="text" name="name" id="name" autocomplete="name" required
             class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6">
         </div>
       </div>
       <div class="sm:col-span-2">
         <label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
         <div class="mt-2.5">
-          <input type="email" name="email" id="email" autocomplete="email"
+          <input type="email" name="email" id="email" autocomplete="email" required
             class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6">
         </div>
       </div>
       <div class="sm:col-span-2">
         <label for="message" class="block text-sm font-semibold leading-6 text-white">Message</label>
         <div class="mt-2.5">
-          <textarea name="message" id="message" rows="4"
+          <textarea name="message" id="message" rows="4" required
             class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"></textarea>
         </div>
       </div>
-      <div class="frc-captcha dark sm:col-span-2" data-sitekey="FCMIACP0EROAV0RE" data-callback="captchaCallback"></div>
     </div>
     <div class="mt-8 flex justify-end">
-      <button type="submit" x-bind:disabled="!captchaDone"
-        class="rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-        x-bind:class="captchaDone ? 'bg-sky-800 hover:bg-sky-700  focus-visible:outline-sky-800 cursor-pointer' : 'bg-gray-500 cursor-not-allowed'">
+      <button data-sitekey="6LelqSssAAAAABesjhBPTNrZCkgcvPr4FhIz5evY" data-callback="onSubmit" data-action="submit"
+        class="g-recaptcha rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-sky-800 hover:bg-sky-700 focus-visible:outline-sky-800 cursor-pointer">
         Send message
       </button>
     </div>
