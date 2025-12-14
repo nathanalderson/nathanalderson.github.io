@@ -13,7 +13,9 @@
 </script>
 
 <form id="contact-form" action="https://formspree.io/f/movgbppv" method="POST" class="px-6 pb-24 pt-20 lg:px-8">
+  {% raw %}
   <input name="subject" type="hidden" value="Website contact from {{ name }}" />
+  {% endraw %}
   <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div class="sm:col-span-2">
