@@ -1,6 +1,6 @@
-url: 'https://nathanalderson.github.io'
-baseurl: ''
-title: 'Nathan Alderson'
+url: "https://nathanalderson.github.io"
+baseurl: ""
+title: "Nathan Alderson"
 
 plugins:
   - jekyll-postcss
@@ -9,7 +9,7 @@ postcss:
   cache: false
 
 exclude:
+  - vendor/
+  - node_modules/
   - package.json
-  - postcss.config.js
-  - tailwind.config.js
   - package-lock.json
