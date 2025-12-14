@@ -1,12 +1,25 @@
 {
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
-    "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.8",
-    "postcss": "^8.4.13",
-    "tailwindcss": "^3.0.24"
+  "name": "nathanalderson.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "nathanalderson.com",
+  "bugs": {
+    "url": "https://github.com/nathanalderson/nathanalderson.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanalderson/nathanalderson.github.io.git"
+  },
+  "author": "Nathan Alderson",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/forms": "^0.5.3",
+    "tailwindcss": "^4.1.16",
     "alpinejs": "^3.12.3"
   }
 }
