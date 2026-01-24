@@ -34,8 +34,10 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm ci
+      - name: Build JavaScript
+        run: npm run build:js
       - name: Build Tailwind CSS
-        run: npx tailwindcss -i main.css -o output.css --minify
+        run: npm run build:css
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

@@ -35,27 +35,37 @@ This project uses [asdf](https://asdf-vm.com/) to manage Node.js and Ruby versio
    npm install
    ```
    
-   This installs Tailwind CSS and related packages.
+   This installs Tailwind CSS, Alpine.js, esbuild, and related packages.
 
 ## Development Workflow
 
 ### Running the Development Server
 
-You'll need to run **two processes** simultaneously for local development:
+You'll need to run **three processes** simultaneously for local development:
 
-#### 1. Tailwind CSS Watcher
+#### 1. JavaScript Bundler Watcher
 
-In one terminal, run the Tailwind watcher to automatically rebuild CSS when you make changes:
+In one terminal, run the esbuild watcher to automatically rebuild JavaScript when you make changes:
 
 ```bash
-npx tailwindcss -i main.css -o output.css --watch
+npm run build:js:watch
+```
+
+This watches `assets/js/app.js` and bundles it with Alpine.js to `assets/js/app.bundle.js`.
+
+#### 2. Tailwind CSS Watcher
+
+In another terminal, run the Tailwind watcher to automatically rebuild CSS when you make changes:
+
+```bash
+npm run build:css:watch
 ```
 
 This watches `main.css` for changes and compiles it to `output.css`.
 
-#### 2. Jekyll Development Server
+#### 3. Jekyll Development Server
 
-In another terminal, run the Jekyll development server:
+In a third terminal, run the Jekyll development server:
 
 ```bash
 bundle exec jekyll serve

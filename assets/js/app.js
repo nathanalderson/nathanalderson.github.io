@@ -1,4 +1,4 @@
-import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.15.4/dist/module.esm.js'
+import Alpine from 'alpinejs'
 
 window.Alpine = Alpine
 
