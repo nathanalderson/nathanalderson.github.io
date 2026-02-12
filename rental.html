@@ -15,9 +15,11 @@ photos:
     description: Kitchen
   - file: bonus room.jpg
     description: Bonus Room
-  - file: back yard.png
-    description: Back yard (the above-ground pool has been removed)
+  - file: front of house.jpg
+    description: Front of the house
   - file: back yard 2.jpg
+    description: Back yard (the above-ground pool has been removed)
+  - file: back yard.jpg
     description: Another view of the back yard
 
 features:
@@ -224,7 +226,7 @@ lease:
 </div>
 
 <!-- Photos -->
-<div id="photos" class="bg-white py-24 sm:py-32">
+<div id="photos" class="bg-white py-24 sm:py-32" x-data="photoGallery()" @keydown.escape.window="closeLightbox()" @keydown.arrow-right.window="lightboxOpen && nextPhoto()" @keydown.arrow-left.window="lightboxOpen && prevPhoto()">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Photos</h2>
@@ -237,15 +239,95 @@ lease:
       class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {% for photo in page.photos %}
       <li>
-        <img class="w-full rounded-2xl object-cover"
-          src="{{ '/assets/images/rental/' | append: photo.file | relative_url }}" alt="{{photo.description}}">
+        <img class="w-full rounded-2xl object-cover cursor-pointer hover:opacity-90 transition-opacity"
+          src="{{ '/assets/images/rental/' | append: photo.file | relative_url }}"
+          alt="{{photo.description}}"
+          @click="openLightbox({{ forloop.index0 }})">
         <h3 class="mt-6 text-lg text-center font-semibold leading-8 tracking-tight text-gray-900">{{ photo.description
           }}</h3>
       </li>
       {% endfor %}
     </ul>
   </div>
+
+  <!-- Lightbox Modal -->
+  <div x-cloak x-show="lightboxOpen" class="fixed inset-0 z-50">
+    <!-- Dark Overlay Background -->
+    <div class="absolute inset-0 bg-black opacity-95" @click="closeLightbox()"></div>
+
+    <!-- Content Container -->
+    <div class="relative w-full h-full flex items-center justify-center" @click="closeLightbox()">
+      <!-- Close Button -->
+      <button @click="closeLightbox()"
+        style="position: fixed; top: 1rem; right: 1rem;"
+        class="text-white hover:text-gray-300 transition-colors z-50 bg-gray-900 bg-opacity-70 rounded-full p-2 hover:bg-opacity-90">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Previous Button -->
+      <button @click.stop="prevPhoto()"
+        style="position: fixed; left: 1rem; top: 50%; transform: translateY(-50%);"
+        class="text-white hover:text-gray-300 transition-colors z-50 bg-gray-900 bg-opacity-70 rounded-full p-4 hover:bg-opacity-90">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button @click.stop="nextPhoto()"
+        style="position: fixed; right: 1rem; top: 50%; transform: translateY(-50%);"
+        class="text-white hover:text-gray-300 transition-colors z-50 bg-gray-900 bg-opacity-70 rounded-full p-4 hover:bg-opacity-90">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Image Container -->
+      <div @click.stop class="max-w-7xl max-h-screen px-4 py-8 pointer-events-none">
+        <img :src="photos[currentIndex].src"
+          :alt="photos[currentIndex].description"
+          class="max-w-full max-h-[80vh] object-contain rounded-lg mx-auto pointer-events-auto">
+        <p class="text-white text-center mt-4 text-lg pointer-events-auto" x-text="photos[currentIndex].description"></p>
+        <p class="text-gray-400 text-center mt-2 text-sm pointer-events-auto" x-text="`${currentIndex + 1} / ${photos.length}`"></p>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<script>
+  function photoGallery() {
+    return {
+      lightboxOpen: false,
+      currentIndex: 0,
+      photos: [
+        {% for photo in page.photos %}
+        {
+          src: '{{ '/assets/images/rental/' | append: photo.file | relative_url }}',
+          description: {{ photo.description | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      openLightbox(index) {
+        this.currentIndex = index;
+        this.lightboxOpen = true;
+        document.body.style.overflow = 'hidden';
+      },
+      closeLightbox() {
+        this.lightboxOpen = false;
+        document.body.style.overflow = '';
+      },
+      nextPhoto() {
+        this.currentIndex = (this.currentIndex + 1) % this.photos.length;
+      },
+      prevPhoto() {
+        this.currentIndex = (this.currentIndex - 1 + this.photos.length) % this.photos.length;
+      }
+    }
+  }
+</script>
 
 <!-- Video -->
 <div id="video" class="bg-white py-12 sm:py-16">
