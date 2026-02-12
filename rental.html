@@ -17,6 +17,7 @@ photos:
     description: Bonus Room
   - file: front of house.jpg
     description: Front of the house
+    horizontal_preview: true
   - file: back yard 2.jpg
     description: Back yard (the above-ground pool has been removed)
   - file: back yard.jpg
@@ -239,7 +240,7 @@ lease:
       class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {% for photo in page.photos %}
       <li>
-        <img class="w-full rounded-2xl object-cover cursor-pointer hover:opacity-90 transition-opacity"
+        <img class="w-full rounded-2xl object-cover {% if photo.horizontal_preview %}object-[center_20%] aspect-[4/3]{% endif %} cursor-pointer hover:opacity-90 transition-opacity"
           src="{{ '/assets/images/rental/' | append: photo.file | relative_url }}"
           alt="{{photo.description}}"
           @click="openLightbox({{ forloop.index0 }})">

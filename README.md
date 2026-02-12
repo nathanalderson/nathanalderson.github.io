@@ -61,7 +61,7 @@ In another terminal, run the Tailwind watcher to automatically rebuild CSS when 
 npm run build:css:watch
 ```
 
-This watches `main.css` for changes and compiles it to `output.css`.
+This watches `main.css` for changes and compiles it to `assets/app.css`.
 
 #### 3. Jekyll Development Server
 
